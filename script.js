@@ -5,10 +5,9 @@ var edit_btn = '';
 var delete_btn = ''; // присваевает значине на 14 строке так как сейчас не существует.
 
 function deleteTask() {
-
+	console.log('delete button clicked');
 	for(let i = 0; i < delete_btn.length; i++) {
 		delete_btn[i].addEventListener('click', function(e) {
-			console.log('delete');
 			let id = e.target.parentNode.getAttribute('data-id');
 
 			tasks.splice(tasks.findIndex(function(o){
@@ -68,8 +67,6 @@ window.onload = function() {
 	console.log(delete_btn);
 
 
-	deleteTask();
-	editTask();
 
 
 };
@@ -94,8 +91,8 @@ function drawList() {
 
 	delete_btn = document.querySelectorAll('#remove_btn');
 	edit_btn = document.querySelectorAll('#edit_btn');
-	editTask();
 	deleteTask();
+	editTask();
 
 
 }
