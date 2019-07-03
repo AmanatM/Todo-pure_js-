@@ -13,7 +13,7 @@ body {
 
 div.container {
 	width: 90%;
-	max-width: 1280px;
+	max-width: 730px;
 	margin: 0 auto;
 }
 
@@ -93,6 +93,11 @@ input[type="checkbox"] {
 	background: #ffeb3b;
 	padding: .7em 1em;
 	border: none;
+
+}
+
+
+@media screen and (min-width: 730px) {
 
 }
 
