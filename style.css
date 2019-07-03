@@ -69,6 +69,7 @@ li {
 	border-bottom: 1px solid #d2d2d2;
 	display: flex;
 	align-items: center;
+	transition: all .3s;
 }
 
 body li button[disabled] {
@@ -78,6 +79,8 @@ body li button[disabled] {
 
 li.completed {
 	background: #ededed;
+	transition: all .3s;
+
 }
 
 li.completed span {
