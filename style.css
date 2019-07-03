@@ -25,6 +25,7 @@ h1 {
 input {
 	font-size: 1em;
 	padding: 1em;
+
 }
 
 .input-group {
@@ -37,6 +38,7 @@ input {
 	border: 2px solid black;
 	border-top-left-radius: .3em;
 	border-bottom-left-radius: .3em;
+	border-right: none;
 }
 
 .input-group #todo_submit {
