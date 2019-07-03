@@ -71,6 +71,21 @@ li {
 	align-items: center;
 }
 
+body li button[disabled] {
+	background: #9d9d9d !important;
+	color: lightgrey !important;
+}
+
+li.completed {
+	background: #ededed;
+}
+
+li.completed span {
+	color: #636363;
+	text-decoration: line-through;
+
+}
+
 li span {
 	margin-right: auto;
 }
