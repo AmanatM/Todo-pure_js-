@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	font-size: 1em;
+	min-height: 100vh;
+	background-color: white;
+}
+
+div.container {
+	width: 90%;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	margin: 1em 0;
+}
+
+input {
+	font-size: 1em;
+	padding: 1em;
+}
+
+.input-group {
+	width: 100%;
+	display: flex;
+}
+
+.input-group input {
+	width: 80%;
+	border: 2px solid black;
+	border-top-left-radius: .3em;
+	border-bottom-left-radius: .3em;
+}
+
+.input-group #todo_submit {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid black;
+	color: white;
+	font-weight: bold;
+	background-color: #81c784;
+	border-left: none;
+	border-top-right-radius: .3em;
+	border-bottom-right-radius: .3em;
+}
+
+.input-group {
+	margin-bottom: 2em;
+}
+
+ul {
+	margin-bottom: 3em;
+}
+
+li {
+	list-style: none;
+	padding: 1.2em .5em;
+	border-bottom: 1px solid #d2d2d2;
+	display: flex;
+	align-items: center;
+}
+
+li span {
+	margin-right: auto;
+}
+
+h3 {
+	border-bottom: 2px solid black;
+}
+
+input[type="checkbox"] {
+	margin-right: .5em;
+}
+
+#remove_btn {
+	background: #ff5722;
+	color: white;
+	font-weight: bold;
+	padding: .7em 1em;
+	border: none;
+}
+
+#edit_btn {
+	background: #ffeb3b;
+	padding: .7em 1em;
+	border: none;
+
+}
+
+
+
+
+
+
+
