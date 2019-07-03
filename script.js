@@ -26,12 +26,13 @@ function deleteTask() {
 function editTask() {
 	for(let i = 0; i < edit_btn.length; i++) {
 		edit_btn[i].addEventListener('click', function(e) {
+				console.log('edit clicked');	
 
 				let parent = e.target.parentNode;
 				let task = parent.querySelectorAll('span')[0];
 
-				if(e.target.innerHTML == 'Save') {
-					e.target.innerHTML = 'Edit';
+				if(e.target.innerHTML == 'SAVE') {
+					e.target.innerHTML = 'EDIT';
 					task.contentEditable = false;
 
 					let id = e.target.parentNode.getAttribute('data-id');
@@ -47,7 +48,7 @@ function editTask() {
 
 					task.contentEditable = true;
 					task.focus();
-					e.target.innerHTML = 'Save';
+					e.target.innerHTML = 'SAVE';
 				}
 
 
@@ -93,7 +94,8 @@ function drawList() {
 
 	delete_btn = document.querySelectorAll('#remove_btn');
 	edit_btn = document.querySelectorAll('#edit_btn');
-		deleteTask();
+	editTask();
+	deleteTask();
 
 
 }
