@@ -1,6 +1,7 @@
 
 var tasks = []; 
 var completed_tasks = ['Check mailboxes', 'Buy some carrot'];
+var edit_btn = '';
 var delete_btn = ''; // присваевает значине на 14 строке так как сейчас не существует.
 
 function deleteTask() {
@@ -22,6 +23,38 @@ function deleteTask() {
 	}
 }
 
+function editTask() {
+	for(let i = 0; i < edit_btn.length; i++) {
+		edit_btn[i].addEventListener('click', function(e) {
+
+				let parent = e.target.parentNode;
+				let task = parent.querySelectorAll('span')[0];
+
+				if(e.target.innerHTML == 'Save') {
+					e.target.innerHTML = 'Edit';
+					task.contentEditable = false;
+
+					let id = e.target.parentNode.getAttribute('data-id');
+					let editedTask = tasks[tasks.findIndex(function(o){return o.id == id;})]
+					
+					editedTask.task = task.innerHTML;
+
+					store();
+
+				}
+
+				else {
+
+					task.contentEditable = true;
+					task.focus();
+					e.target.innerHTML = 'Save';
+				}
+
+
+		});
+	}
+}
+
 window.onload = function() {
 	tasks = JSON.parse(localStorage.tasks); // загружает данные с localStorage в переменну так как localStorage поддерживает только строки
 
@@ -30,10 +63,12 @@ window.onload = function() {
 
 
 	delete_btn = document.querySelectorAll('#remove_btn');
+	edit_btn = document.querySelectorAll('#edit_btn');
 	console.log(delete_btn);
 
 
 	deleteTask();
+	editTask();
 
 
 };
@@ -57,7 +92,8 @@ function drawList() {
 	}
 
 	delete_btn = document.querySelectorAll('#remove_btn');
-	deleteTask();
+	edit_btn = document.querySelectorAll('#edit_btn');
+		deleteTask();
 
 
 }
