@@ -13,8 +13,8 @@ function deleteTask() {
 			    return o.id == id;
 			}), 1);
 
-			drawList();
 			save();
+			drawList();
 
 
 		});
